@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwinLocks.core
+namespace SwinLocks
 {
     abstract class GameState
     {
-        public abstract void Update();
-        public abstract void Render(SpriteBatch sb);
+        public abstract void update();
+        public abstract void render(SpriteBatch sb);
     }
 }

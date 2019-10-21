@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace SwinLocks.utils
+namespace SwinLocks
 {
     class Input
     {
@@ -16,19 +16,19 @@ namespace SwinLocks.utils
         public static MouseState lastMouseState;
         public static MouseState mouseState = Mouse.GetState();
 
-        public static bool KeyDown(Keys keyCode) =>
+        public static bool keyDown(Keys keyCode) =>
             lastKeyState.IsKeyDown(keyCode);
 
-        public static bool MouseDown() =>
+        public static bool mouseDown() =>
             mouseState.LeftButton == ButtonState.Pressed;
 
-        public static bool KeyPressed(Keys keyCode) =>
+        public static bool keyPressed(Keys keyCode) =>
             lastKeyState.IsKeyUp(keyCode) && keyState.IsKeyDown(keyCode);
 
-        public static Vector2 MousePos() =>
+        public static Vector2 mousePos() =>
             mouseState.Position.ToVector2();
 
-        public static void Update()
+        public static void update()
         {
             lastKeyState = keyState;
             keyState = Keyboard.GetState();

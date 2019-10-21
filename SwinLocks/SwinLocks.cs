@@ -1,9 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using SwinLocks.utils;
-using SwinLocks.core;
-using SwinLocks.ecs;
+using System;
 
 namespace SwinLocks
 {
@@ -16,39 +14,42 @@ namespace SwinLocks
         public SwinLocks()
         {
             graphics = new GraphicsDeviceManager(this);
+            IsMouseVisible = true;
             Content.RootDirectory = "Content";
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-            state = new GameplayState();
+            new GameContext();
+
+            graphics.PreferredBackBufferWidth = 1920;//3840;//1920;
+            graphics.PreferredBackBufferHeight = 1080;//2160;//1080;
+            //graphics.IsFullScreen = true;
+            graphics.ApplyChanges();
 
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
             sb = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            Resources.player = Content.Load<Texture2D>("circle");
+            Resources.pillar = Content.Load<Texture2D>("pillar");
+
+            state = new GameplayState(sb);
         }
 
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
         }
 
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape)) Exit();
 
-            Input.Update();
-            if ( Input.KeyPressed(Keys.Up) )
-                System.Console.WriteLine("Up Pressed");
-            // TODO: Add your update logic here
-            state.Update();
+            Input.update();
+            state.update();
 
             base.Update(gameTime);
         }
@@ -57,8 +58,9 @@ namespace SwinLocks
         {
             GraphicsDevice.Clear(Color.DarkGray);
 
-            state.Render(sb);
-            // TODO: Add your drawing code here
+            sb.Begin();
+            state.render(sb);
+            sb.End();
 
             base.Draw(gameTime);
         }

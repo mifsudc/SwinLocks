@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace SwinLocks.core
+namespace SwinLocks
 {
     class MenuState : GameState
     {
-        public override void Update()
+        public override void update()
         {
             throw new NotImplementedException();
         }
 
-        public override void Render(SpriteBatch sb)
+        public override void render(SpriteBatch sb)
         {
             throw new NotImplementedException();
         }

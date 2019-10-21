@@ -4,23 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwinLocks.ecs
+namespace SwinLocks
 {
     class Entity
     {
         private Dictionary<Type, Component> components;
 
-        public Component Get<T>() where T : Component
-        {
-            return components[typeof(T)];
+        public Entity() {
+            components = new Dictionary<Type, Component>();
         }
 
-        void Attach(Component comp)
+        public Component get<T>() where T : Component =>
+            components[typeof(T)];
+
+        public bool has<T>() where T : Component =>
+            components.ContainsKey(typeof(T));
+
+        public void attach(Component comp)
         {
             components.Add( comp.GetType(), comp);
         }
 
-        void Log()
+        public void log()
         {
             foreach (KeyValuePair<Type, Component> e in components)
             {

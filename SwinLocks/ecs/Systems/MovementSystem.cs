@@ -1,24 +1,24 @@
-﻿using SwinLocks.ecs.Components;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwinLocks.ecs.Systems
+namespace SwinLocks
 {
     class MovementSystem : System
     {
-        private List<Entity> ents;
-
         public override void Execute()
         {
+            List<Entity> ents = GameContext.I.entities.Where(e => e.has<SpatialComponent>()).ToList();
+
             foreach (Entity e in ents)
             {
-                SpatialComponent s = e.Get<SpatialComponent>() as SpatialComponent;
+                SpatialComponent s = e.get<SpatialComponent>() as SpatialComponent;
 
-                // Apply accel
                 s.pos += s.vel;
+                s.vel.X *= Constants.FRICTION;
+                s.vel.Y *= Constants.FRICTION;
             }
         }
     }

@@ -24,3 +24,31 @@ C:\Users\Cory\Documents\swin\GAM\31 - DOC - Custom Project D Level\SwinLocks\Swi
 C:\Users\Cory\Documents\swin\GAM\31 - DOC - Custom Project D Level\SwinLocks\SwinLocks\bin\Windows\x86\Debug\MonoGame.Extended.dll
 C:\Users\Cory\Documents\swin\GAM\31 - DOC - Custom Project D Level\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Newtonsoft.Json.dll
 C:\Users\Cory\Documents\swin\GAM\31 - DOC - Custom Project D Level\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SwinLocks.exe
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SwinLocks.pdb
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\MonoGame.Extended.dll
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\obj\x86\Debug\SwinLocks.csprojAssemblyReference.cache
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\obj\x86\Debug\SwinLocks.csproj.CoreCompileInputs.cache
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\obj\x86\Debug\SwinLocks.csproj.CopyComplete
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\obj\x86\Debug\SwinLocks.exe
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\obj\x86\Debug\SwinLocks.pdb
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\circle.xnb
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\pillar.xnb

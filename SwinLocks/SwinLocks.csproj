@@ -41,21 +41,34 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="core\GameContext.cs" />
-    <Compile Include="core\GameplayState.cs" />
-    <Compile Include="core\GameState.cs" />
-    <Compile Include="core\MenuState.cs" />
+    <Compile Include="Content\Resources.cs" />
+    <Compile Include="Controllers\Command.cs" />
+    <Compile Include="Controllers\InputController.cs" />
+    <Compile Include="Controllers\Temp2Controller.cs" />
+    <Compile Include="Core\EntityFactory.cs" />
+    <Compile Include="ecs\Components\BumpComponent.cs" />
+    <Compile Include="ecs\Components\CollisionComponent.cs" />
+    <Compile Include="ecs\Systems\CollisionSystem.cs" />
+    <Compile Include="Utils\Constants.cs" />
+    <Compile Include="Utils\ExtensionMethods.cs" />
+    <Compile Include="Core\GameContext.cs" />
+    <Compile Include="Core\GameplayState.cs" />
+    <Compile Include="Core\GameState.cs" />
+    <Compile Include="Core\MenuState.cs" />
     <Compile Include="ecs\Component.cs" />
     <Compile Include="ecs\Components\ControllableComponent.cs" />
     <Compile Include="ecs\Components\RenderableComponent.cs" />
     <Compile Include="ecs\Components\SpatialComponent.cs" />
+    <Compile Include="Controllers\KeyboardController.cs" />
     <Compile Include="ecs\Entity.cs" />
     <Compile Include="ecs\System.cs" />
+    <Compile Include="ecs\Systems\InputSystem.cs" />
     <Compile Include="ecs\Systems\MovementSystem.cs" />
+    <Compile Include="ecs\Systems\RenderingSystem.cs" />
     <Compile Include="SwinLocks.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="utils\Input.cs" />
+    <Compile Include="Utils\Input.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Extended, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">

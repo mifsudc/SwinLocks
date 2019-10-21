@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwinLocks.ecs.Components
+namespace SwinLocks
 {
-    class ControllableComponent : Component
-    {
-        
+    class ControllableComponent : Component {
+
+        private IInputController controller;
+
+        public IInputController Controller { get => controller; set => controller = value; }
     }
 }
