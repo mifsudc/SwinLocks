@@ -20,8 +20,7 @@ namespace SwinLocks {
                 RenderableComponent r = e.get<RenderableComponent>() as RenderableComponent;
                 SpatialComponent s = e.get<SpatialComponent>() as SpatialComponent;
                 CollisionComponent c = e.get<CollisionComponent>() as CollisionComponent;
-                Color col = c.colliding ? Color.White : Color.LightGray;
-                sb.Draw(r.tex, s.pos, r.offset, col, s.rot, r.mid, 1f, SpriteEffects.None, 0f);
+                sb.Draw(r.tex, s.pos, r.offset, r.col, s.rot, r.mid, 1f, SpriteEffects.None, 0f);
             }
         }
     }

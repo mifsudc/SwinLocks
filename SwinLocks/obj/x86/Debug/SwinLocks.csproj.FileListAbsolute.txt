@@ -52,3 +52,5 @@ C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\obj\x86\Debug\
 C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\obj\x86\Debug\SwinLocks.pdb
 C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\circle.xnb
 C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\pillar.xnb
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\fireball.xnb
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\lightning.xnb

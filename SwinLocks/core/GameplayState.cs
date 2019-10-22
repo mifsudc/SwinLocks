@@ -17,9 +17,14 @@ namespace SwinLocks
             // Set up systems
             renderingSystem = new RenderingSystem(sb);
             systems = new List<System>();
+            // CORE SYSTEMS
             systems.Add( new InputSystem() );
             systems.Add( new MovementSystem() );
             systems.Add( new CollisionSystem() );
+            systems.Add( new DecaySystem() );
+
+            // COLLISION EVENT SYSTEMS
+            systems.Add(new DestroyerSystem());
 
             for (int i = 0; i < 4; i++ ) {
 
@@ -44,6 +49,7 @@ namespace SwinLocks
             foreach (System s in systems) {
                 s.Execute();
             }
+            GameContext.I.collRegister.clear();
         }
 
         public override void render(SpriteBatch sb) {

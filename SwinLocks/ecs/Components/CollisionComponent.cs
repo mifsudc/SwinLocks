@@ -10,9 +10,7 @@ namespace SwinLocks {
     class CollisionComponent : Component {
 
         public int radius;
-        public bool colliding;
         public CollisionComponent(int radius) {
-            colliding = false;
             this.radius = radius;
         }
     }

@@ -9,6 +9,7 @@ namespace SwinLocks {
     {
         public static GameContext I;
         public List<Entity> entities;
+        public CollisionRegister collRegister;
 
         public GameContext() {
             if (I != null) {
@@ -19,6 +20,7 @@ namespace SwinLocks {
             }
 
             entities = new List<Entity>();
+            collRegister = new CollisionRegister();
         }
     }
 }

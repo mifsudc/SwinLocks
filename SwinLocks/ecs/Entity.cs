@@ -14,8 +14,8 @@ namespace SwinLocks
             components = new Dictionary<Type, Component>();
         }
 
-        public Component get<T>() where T : Component =>
-            components[typeof(T)];
+        public T get<T>() where T : Component =>
+            components[typeof(T)] as T;
 
         public bool has<T>() where T : Component =>
             components.ContainsKey(typeof(T));

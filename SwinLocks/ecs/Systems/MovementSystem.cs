@@ -17,8 +17,10 @@ namespace SwinLocks
                 SpatialComponent s = e.get<SpatialComponent>() as SpatialComponent;
 
                 s.pos += s.vel;
-                s.vel.X *= Constants.FRICTION;
-                s.vel.Y *= Constants.FRICTION;
+                if (s.friction) {
+                    s.vel.X *= Constants.FRICTION;
+                    s.vel.Y *= Constants.FRICTION;
+                }
             }
         }
     }

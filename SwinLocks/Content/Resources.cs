@@ -11,5 +11,7 @@ namespace SwinLocks {
         // public static SpriteFont font;
         public static Texture2D player;
         public static Texture2D pillar;
+        public static Texture2D fireball;
+        public static Texture2D lightning;
     }
 }

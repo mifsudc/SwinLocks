@@ -41,6 +41,16 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Collision\Hitboxes\CircleHitbox.cs" />
+    <Compile Include="Collision\Colliders\Collider.cs" />
+    <Compile Include="Collision\CollisionEvent.cs" />
+    <Compile Include="Collision\CollisionRegister.cs" />
+    <Compile Include="Collision\Hitboxes\Hitbox.cs" />
+    <Compile Include="Collision\Hitboxes\LineHitbox.cs" />
+    <Compile Include="Collision\Colliders\RectCircleCollider.cs" />
+    <Compile Include="Collision\Hitboxes\RectHitbox.cs" />
+    <Compile Include="Collision\Colliders\RectLineCollider.cs" />
+    <Compile Include="Collision\Colliders\RectRectCollider.cs" />
     <Compile Include="Content\Resources.cs" />
     <Compile Include="Controllers\Command.cs" />
     <Compile Include="Controllers\InputController.cs" />
@@ -48,7 +58,18 @@
     <Compile Include="Core\EntityFactory.cs" />
     <Compile Include="ecs\Components\BumpComponent.cs" />
     <Compile Include="ecs\Components\CollisionComponent.cs" />
+    <Compile Include="ecs\Components\DamageComponent.cs" />
+    <Compile Include="ecs\Components\DecayComponent.cs" />
+    <Compile Include="ecs\Components\DestructibleComponent.cs" />
+    <Compile Include="ecs\Components\DestructorComponent.cs" />
+    <Compile Include="ecs\Components\HealthComponent.cs" />
+    <Compile Include="ecs\Components\OwnableComponent.cs" />
+    <Compile Include="ecs\Components\StaticComponent.cs" />
     <Compile Include="ecs\Systems\CollisionSystem.cs" />
+    <Compile Include="ecs\Systems\DamageSystem.cs" />
+    <Compile Include="ecs\Systems\DecaySystem.cs" />
+    <Compile Include="ecs\Systems\DestroyerSystem.cs" />
+    <Compile Include="ecs\Systems\KnockbackSystem.cs" />
     <Compile Include="Utils\Constants.cs" />
     <Compile Include="Utils\ExtensionMethods.cs" />
     <Compile Include="Core\GameContext.cs" />

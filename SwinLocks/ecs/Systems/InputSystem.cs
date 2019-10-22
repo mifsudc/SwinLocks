@@ -34,6 +34,12 @@ namespace SwinLocks {
                         s.vel.X *= 0.7f;
                         s.vel.Y *= 0.7f;
                     }
+
+                    if ( comm == Command.Sk1 ) {
+                        CollisionComponent coll = e.get<CollisionComponent>() as CollisionComponent;
+                        GameContext.I.entities.Add(EntityFactory.fireball(
+                            e, s.pos, coll.radius, s.rot) );
+                    }
                 }
             }
         }

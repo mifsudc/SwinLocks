@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SwinLocks
 {
-    class Component
+    abstract class Component
     {
     }
 }

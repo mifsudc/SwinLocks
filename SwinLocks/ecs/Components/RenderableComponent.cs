@@ -12,13 +12,13 @@ namespace SwinLocks
     {
         public Texture2D tex;
         public Vector2 mid;
-        public Rectangle offset;    // draw offset
-
-        public RenderableComponent(Texture2D tex, int offset, int midScale) {
+        public Rectangle? offset;    // draw offset
+        public Color col;
+        public RenderableComponent(Texture2D tex, int midScale, Color col) {
             this.tex = tex;
-            mid = new Vector2( tex.Height / midScale, tex.Width / midScale);
-            this.offset = new Rectangle( offset % 2 * 100, (int) Math.Floor( (double) (offset / 2) ) * 100, 100, 100);
+            mid = new Vector2(tex.Height / midScale, tex.Width / midScale);
+            offset = null;
+            this.col = col;
         }
-
     }
 }

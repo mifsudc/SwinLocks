@@ -36,6 +36,8 @@ namespace SwinLocks
 
             Resources.player = Content.Load<Texture2D>("circle");
             Resources.pillar = Content.Load<Texture2D>("pillar");
+            Resources.fireball = Content.Load<Texture2D>("fireball");
+            Resources.lightning = Content.Load<Texture2D>("lightning");
 
             state = new GameplayState(sb);
         }
