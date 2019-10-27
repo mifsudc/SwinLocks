@@ -54,3 +54,6 @@ C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x8
 C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\pillar.xnb
 C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\fireball.xnb
 C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\lightning.xnb
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\font.xnb
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\particle.xnb
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\player.xnb

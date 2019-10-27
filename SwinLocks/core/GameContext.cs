@@ -8,7 +8,7 @@ namespace SwinLocks {
     class GameContext 
     {
         public static GameContext I;
-        public List<Entity> entities;
+        private List<Entity> entities;
         public CollisionRegister collRegister;
 
         public GameContext() {
@@ -22,5 +22,17 @@ namespace SwinLocks {
             entities = new List<Entity>();
             collRegister = new CollisionRegister();
         }
+
+        public static void registerEntity(Entity e)
+            => I.entities.Add(e);
+
+        public static void registerEntities(List<Entity> l)
+            => I.entities.AddRange(l);
+
+        public static void deregisterEntity(Entity e)
+            => I.entities.Remove(e);
+
+        public static List<Entity> queryEntities<T>() where T : Component
+            => (from e in I.entities where e.has<T>() select e).ToList();
     }
 }

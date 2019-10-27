@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwinLocks.Collision {
-    class RectLineCollider {
+namespace SwinLocks.Commands {
+    class LightningCommand {
     }
 }

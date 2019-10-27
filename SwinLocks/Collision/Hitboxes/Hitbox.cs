@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace SwinLocks {
     abstract class Hitbox {
-        Type type;
-
-        public void setType<T>() where T : Hitbox {
-            type = typeof(T);
-        }
+        public Type type { get; protected set; }
     }
 }

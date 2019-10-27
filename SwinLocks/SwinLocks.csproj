@@ -42,20 +42,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Collision\Hitboxes\CircleHitbox.cs" />
-    <Compile Include="Collision\Colliders\Collider.cs" />
+    <Compile Include="Collision\Collider.cs" />
     <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Collision\CollisionRegister.cs" />
     <Compile Include="Collision\Hitboxes\Hitbox.cs" />
     <Compile Include="Collision\Hitboxes\LineHitbox.cs" />
-    <Compile Include="Collision\Colliders\RectCircleCollider.cs" />
     <Compile Include="Collision\Hitboxes\RectHitbox.cs" />
-    <Compile Include="Collision\Colliders\RectLineCollider.cs" />
-    <Compile Include="Collision\Colliders\RectRectCollider.cs" />
+    <Compile Include="Commands\BlinkCommand.cs" />
+    <Compile Include="Commands\BoomerangCommand.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\CommandProcessor.cs" />
+    <Compile Include="Commands\DrainCommand.cs" />
+    <Compile Include="Commands\FireballCommand.cs" />
+    <Compile Include="Commands\LightningCommand.cs" />
     <Compile Include="Content\Resources.cs" />
     <Compile Include="Controllers\Command.cs" />
     <Compile Include="Controllers\InputController.cs" />
     <Compile Include="Controllers\Temp2Controller.cs" />
+    <Compile Include="Core\Animations.cs" />
     <Compile Include="Core\EntityFactory.cs" />
+    <Compile Include="ecs\Components\AnimationComponent.cs" />
+    <Compile Include="ecs\Systems\AnimationSystem.cs" />
     <Compile Include="ecs\Components\BumpComponent.cs" />
     <Compile Include="ecs\Components\CollisionComponent.cs" />
     <Compile Include="ecs\Components\DamageComponent.cs" />

@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwinLocks {
-    class RectCircleCollider {
-
+namespace SwinLocks.Commands {
+    class BlinkCommand {
     }
 }

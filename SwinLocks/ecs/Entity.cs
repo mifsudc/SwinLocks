@@ -10,9 +10,8 @@ namespace SwinLocks
     {
         private Dictionary<Type, Component> components;
 
-        public Entity() {
-            components = new Dictionary<Type, Component>();
-        }
+        public Entity()
+            => components = new Dictionary<Type, Component>();
 
         public T get<T>() where T : Component =>
             components[typeof(T)] as T;
@@ -21,16 +20,9 @@ namespace SwinLocks
             components.ContainsKey(typeof(T));
 
         public void attach(Component comp)
-        {
-            components.Add( comp.GetType(), comp);
-        }
+            => components.Add( comp.GetType(), comp);
 
-        public void log()
-        {
-            foreach (KeyValuePair<Type, Component> e in components)
-            {
-                Console.WriteLine(e.Key.ToString() + " " + e.Value.ToString());
-            }
-        }
+        public void detach<T>() where T: Component
+            => components.Remove(typeof(T));
     }
 }

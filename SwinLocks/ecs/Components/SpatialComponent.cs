@@ -11,15 +11,22 @@ namespace SwinLocks
     {
         public Vector2 pos;
         public Vector2 vel;
+        public Vector2 origin;
         public float rot;
+        public float angularMomentum;
         public bool friction;
 
-        public SpatialComponent(float x, float y, bool friction)
-            : this(new Vector2(x, y), friction) {}
+        public Vector2 Midpoint { get => pos + origin; }
 
-        public SpatialComponent(Vector2 pos, bool friction) {
+        public SpatialComponent(float x, float y, bool friction, Vector2 origin)
+            : this(new Vector2(x, y), friction, origin) {}
+
+        public SpatialComponent(Vector2 pos, bool friction, Vector2 origin) {
             this.pos = pos;
             this.friction = friction;
+            this.origin = origin;
+            angularMomentum = 0;
+            rot = (float) Math.PI / 2;
         }
     }
 }

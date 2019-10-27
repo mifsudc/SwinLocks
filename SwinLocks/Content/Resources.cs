@@ -8,10 +8,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SwinLocks {
     static class Resources {
-        // public static SpriteFont font;
         public static Texture2D player;
         public static Texture2D pillar;
         public static Texture2D fireball;
         public static Texture2D lightning;
+        public static Texture2D particle;
+        public static Texture2D meteor;
+
+        public static SpriteFont font;
     }
 }

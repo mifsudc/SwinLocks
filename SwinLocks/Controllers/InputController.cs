@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace SwinLocks {
     interface IInputController {
 
-        List<Command> Poll();
+        List<Controller.Command> Poll();
     }
 }

@@ -8,10 +8,11 @@ using MonoGame.Extended;
 
 namespace SwinLocks {
     class CollisionComponent : Component {
+        public Hitbox hitbox { get; private set; }
 
-        public int radius;
-        public CollisionComponent(int radius) {
-            this.radius = radius;
-        }
+        public CollisionComponent(Hitbox hitbox)
+            => this.hitbox = hitbox;
+
+        public Type Type { get => hitbox.type; }
     }
 }

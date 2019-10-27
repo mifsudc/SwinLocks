@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SwinLocks {
-    class LineHitbox {
+    class LineHitbox : Hitbox {
 
     }
 }

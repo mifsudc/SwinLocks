@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 namespace SwinLocks {
     class RenderingSystem : System {
 
-        SpriteBatch sb;
+        private SpriteBatch sb;
         public RenderingSystem(SpriteBatch sb) {
             this.sb = sb;
         }
 
         public override void Execute() {
-            List<Entity> ents = GameContext.I.entities.Where(e => e.has<RenderableComponent>()).ToList();
+            List<Entity> ents = GameContext.queryEntities<RenderableComponent>();
             foreach (Entity e in ents) {
                 RenderableComponent r = e.get<RenderableComponent>() as RenderableComponent;
                 SpatialComponent s = e.get<SpatialComponent>() as SpatialComponent;
-                CollisionComponent c = e.get<CollisionComponent>() as CollisionComponent;
-                sb.Draw(r.tex, s.pos, r.offset, r.col, s.rot, r.mid, 1f, SpriteEffects.None, 0f);
+                float rot = r.drawRotation ? s.rot : 0;
+                sb.Draw(r.tex, s.pos, r.offset, r.col, rot, s.origin, 1f, SpriteEffects.None, 0f);
             }
         }
     }

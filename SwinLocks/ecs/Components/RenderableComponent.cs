@@ -11,14 +11,14 @@ namespace SwinLocks
     class RenderableComponent : Component
     {
         public Texture2D tex;
-        public Vector2 mid;
-        public Rectangle? offset;    // draw offset
+        public Rectangle? offset;
         public Color col;
-        public RenderableComponent(Texture2D tex, int midScale, Color col) {
+        public bool drawRotation;
+        public RenderableComponent(Texture2D tex, Color col) {
             this.tex = tex;
-            mid = new Vector2(tex.Height / midScale, tex.Width / midScale);
             offset = null;
             this.col = col;
+            drawRotation = true;
         }
     }
 }

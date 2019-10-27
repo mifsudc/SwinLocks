@@ -5,7 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SwinLocks {
-    class CircleHitbox {
-        
+    class CircleHitbox : Hitbox {
+        public float radius { get; private set; }
+
+        public CircleHitbox(int radius) {
+            type = typeof(CircleHitbox);
+            this.radius = radius;
+        }
     }
 }

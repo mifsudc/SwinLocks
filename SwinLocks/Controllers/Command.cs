@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwinLocks {
+namespace SwinLocks.Controller {
     enum Command {
         Up,
         Right,

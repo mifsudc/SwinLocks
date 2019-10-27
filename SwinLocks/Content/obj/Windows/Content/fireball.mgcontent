@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/fireball.bmp</SourceFile>
-  <SourceTime>2019-10-21T15:12:07.2388781+11:00</SourceTime>
+  <SourceFile>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/fireball.png</SourceFile>
+  <SourceTime>2019-10-23T22:24:06.8961377+11:00</SourceTime>
   <DestFile>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/bin/Windows/Content/fireball.xnb</DestFile>
-  <DestTime>2019-10-21T15:19:43.2737652+11:00</DestTime>
+  <DestTime>2019-10-23T22:25:26.5114313+11:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-09T03:35:54+11:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

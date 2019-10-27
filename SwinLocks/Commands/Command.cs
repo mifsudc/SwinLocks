@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwinLocks.Collision {
-    class RectRectCollider {
+namespace SwinLocks.Commands {
+    abstract class Command {
+        public abstract void execute(Entity e, SpatialComponent s);
     }
 }
