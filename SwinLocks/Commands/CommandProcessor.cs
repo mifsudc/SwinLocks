@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace SwinLocks {
     class CommandProcessor {
-        private Dictionary<int, Commands.Command> skills;
+        private Dictionary<int, Command> skills;
 
-        CommandProcessor()
-            => skills = new Dictionary<int, Commands.Command>();
+        public CommandProcessor()
+            => skills = new Dictionary<int, Command>();
 
-        public void addSkill(int slot, Commands.Command skill)
+        public void addSkill(int slot, Command skill)
             => skills.Add(slot, skill);
 
         public void Process(int slot, Entity e) {

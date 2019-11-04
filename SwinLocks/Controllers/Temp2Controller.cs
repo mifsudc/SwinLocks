@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace SwinLocks {
     class Temp2Controller : IInputController {
+
+        public CommandProcessor skillProc { get; private set; }
+
         public List<Controller.Command> Poll() {
             List<Controller.Command> actions = new List<Controller.Command>();
 
@@ -29,7 +32,7 @@ namespace SwinLocks {
                 actions.Add(Controller.Command.Sk1);
             }
 
-            else if ( Input.keyPressed(Keys.D2) ) {
+            else if ( Input.keyPressed(Keys.R) ) {
                 actions.Add(Controller.Command.Sk2);
             }
 

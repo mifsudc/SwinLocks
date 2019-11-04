@@ -14,6 +14,8 @@ namespace SwinLocks {
         public static readonly float FIREBALL_SPEED = 10f;
         public static readonly float BUMP_EFFICIENCY = 0.7f;
         public static readonly float TURN_RATE = 0.08f;
+        public static readonly int LAVA_DAMAGE = 1;
+        public static readonly int LAVA_CLOCK = 30;
 
         // Image resource dimensions
         public static readonly int PLAYER_PILLAR = 100;

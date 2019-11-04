@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
 
 namespace SwinLocks {
     class InputSystem : System {
@@ -36,10 +37,20 @@ namespace SwinLocks {
                     }
 
                     if (comm == Controller.Command.Sk1) {
-                        GameContext.registerEntity(EntityFactory.fireball(e, s.pos, s.rot));
+                        GameContext.registerEntity( EntityFactory.fireball(e, s.pos, s.rot) );
+                    }
+
+                    if (comm == Controller.Command.Sk2) {
+                        s.pos.X += 100 * (float)Math.Cos(s.rot);
+                        s.pos.Y += 100 * (float)Math.Sin(s.rot);
+                    }
+
+                    if (comm == Controller.Command.Sk3) {
+                        GameContext.registerEntity( EntityFactory.DrainShot(e, s.pos, s.rot));
                     }
                 }
             }
         }
     }
 }
+;

@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SwinLocks {
-    class KnockbackSystem {
+    class KnockbackSystem : System {
+        public override void Execute() {
+            
+        }
     }
 }

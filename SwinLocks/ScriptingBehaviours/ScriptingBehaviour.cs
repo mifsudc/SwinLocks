@@ -5,9 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SwinLocks {
-    interface IInputController {
+    class ScriptingBehaviour {
 
-        CommandProcessor skillProc { get; }
-        List<Controller.Command> Poll();
     }
 }

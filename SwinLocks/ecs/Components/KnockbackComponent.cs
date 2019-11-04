@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SwinLocks {
-    interface IInputController {
+    class KnockbackComponent : Component {
+        public int power;
 
-        CommandProcessor skillProc { get; }
-        List<Controller.Command> Poll();
+        public KnockbackComponent(int power) =>
+            this.power = power;
     }
 }

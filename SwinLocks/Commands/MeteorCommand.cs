@@ -5,9 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SwinLocks {
-    interface IInputController {
-
-        CommandProcessor skillProc { get; }
-        List<Controller.Command> Poll();
+    class MeteorCommand : Command {
+        public override void execute(Entity e, SpatialComponent s) => throw new NotImplementedException();
     }
 }

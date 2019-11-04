@@ -55,6 +55,7 @@
     <Compile Include="Commands\DrainCommand.cs" />
     <Compile Include="Commands\FireballCommand.cs" />
     <Compile Include="Commands\LightningCommand.cs" />
+    <Compile Include="Commands\MeteorCommand.cs" />
     <Compile Include="Content\Resources.cs" />
     <Compile Include="Controllers\Command.cs" />
     <Compile Include="Controllers\InputController.cs" />
@@ -62,6 +63,8 @@
     <Compile Include="Core\Animations.cs" />
     <Compile Include="Core\EntityFactory.cs" />
     <Compile Include="ecs\Components\AnimationComponent.cs" />
+    <Compile Include="ecs\Components\KnockbackComponent.cs" />
+    <Compile Include="ecs\Components\ScriptingComponent.cs" />
     <Compile Include="ecs\Systems\AnimationSystem.cs" />
     <Compile Include="ecs\Components\BumpComponent.cs" />
     <Compile Include="ecs\Components\CollisionComponent.cs" />
@@ -77,6 +80,8 @@
     <Compile Include="ecs\Systems\DecaySystem.cs" />
     <Compile Include="ecs\Systems\DestroyerSystem.cs" />
     <Compile Include="ecs\Systems\KnockbackSystem.cs" />
+    <Compile Include="ecs\Systems\LavaSystem.cs" />
+    <Compile Include="ScriptingBehaviours\ScriptingBehaviour.cs" />
     <Compile Include="Utils\Constants.cs" />
     <Compile Include="Utils\ExtensionMethods.cs" />
     <Compile Include="Core\GameContext.cs" />

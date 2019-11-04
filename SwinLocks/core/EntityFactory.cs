@@ -117,9 +117,43 @@ namespace SwinLocks {
             return e;
         }
 
-        public static Entity Meteor(Vector2 source) {
+        public static Entity DrainShot(Entity owner, Vector2 sourcePos, float rot) {
+            Entity e = new Entity();
 
+            RenderableComponent r = new RenderableComponent(Resources.fireball, Color.Green);
+            e.attach(r);
+
+            Vector2 pos = sourcePos;
+            SpatialComponent s = new SpatialComponent(pos, false,
+                new Vector2(r.tex.Width / 2, r.tex.Height / 2));
+            s.vel = Vector2.Multiply(
+                new Vector2((float)Math.Cos(rot), (float)Math.Sin(rot)), Constants.FIREBALL_SPEED);
+            s.angularMomentum += 0.9f;
+            e.attach(s);
+
+            if ( fireballHitbox == null )
+                fireballHitbox = new CircleHitbox(r.tex.Height / 2);
+
+            e.attach(new CollisionComponent(fireballHitbox));
+            e.attach(new DecayComponent(60));
+            e.attach(new DestructibleComponent());
+            e.attach(new OwnableComponent(owner));
+            e.attach(new DamageComponent(40));
+
+            e.attach(new AnimationComponent(
+                new List<(Animations.animate animate, int period)>{
+                    (Animations.rotateColors(
+                        new List<Color>() { Color.Green, Color.LightGreen, Color.ForestGreen }
+                        ), 2)
+                }
+            ));
+
+            return e;
         }
+
+        //public static Entity Meteor(Vector2 source) {
+
+        //}
 
         //public static Entity lightning(Entity owner, Vector2 sourcePos, float sourceRadius, float rot) {
         //    Entity e = new Entity();
