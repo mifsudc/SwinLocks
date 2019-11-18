@@ -15,6 +15,7 @@ namespace SwinLocks
         public float rot;
         public float angularMomentum;
         public bool friction;
+        public bool moveable;
 
         public Vector2 Midpoint { get => pos + origin; }
 
@@ -27,6 +28,7 @@ namespace SwinLocks
             this.origin = origin;
             angularMomentum = 0;
             rot = (float) Math.PI / 2;
+            moveable = true;
         }
     }
 }

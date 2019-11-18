@@ -9,9 +9,12 @@ namespace SwinLocks
     class Entity
     {
         private Dictionary<Type, Component> components;
+        private List<Subscriber> subscribers;
 
-        public Entity()
-            => components = new Dictionary<Type, Component>();
+        public Entity() {
+            components = new Dictionary<Type, Component>();
+            subscribers = new List<Subscriber>();
+        }
 
         public T get<T>() where T : Component =>
             components[typeof(T)] as T;
@@ -24,5 +27,13 @@ namespace SwinLocks
 
         public void detach<T>() where T: Component
             => components.Remove(typeof(T));
+
+        public void subscribe(Subscriber s) =>
+            subscribers.Add(s);
+
+        public void notify() {
+            foreach ( Subscriber s in subscribers )
+                s.notify(this);
+        }
     }
 }

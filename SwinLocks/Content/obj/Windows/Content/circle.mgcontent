@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/circle.bmp</SourceFile>
-  <SourceTime>2019-10-22T23:25:37.3663147+11:00</SourceTime>
+  <SourceTime>2019-11-04T23:47:36.2506994+11:00</SourceTime>
   <DestFile>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/bin/Windows/Content/circle.xnb</DestFile>
-  <DestTime>2019-10-22T23:27:01.6017782+11:00</DestTime>
+  <DestTime>2019-11-04T23:47:43.7146349+11:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-09T03:35:54+11:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

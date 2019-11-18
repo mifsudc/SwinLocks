@@ -31,7 +31,7 @@ namespace SwinLocks {
             int x = (int) Math.Floor((s.rot + Math.PI / 8) / (Math.PI / 4));
 
             if ( x > 7 )
-                x -= 1;
+                x = 0;
 
             rect.X = x * 100;
             r.offset = rect;

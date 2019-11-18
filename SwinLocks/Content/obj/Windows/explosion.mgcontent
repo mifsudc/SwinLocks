@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/explosion.mp3</SourceFile>
+  <SourceTime>2019-11-18T19:36:30.5270857+11:00</SourceTime>
+  <DestFile>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/bin/Windows/explosion.xnb</DestFile>
+  <DestTime>2019-11-18T20:33:03.4390775+11:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2018-12-09T03:35:54+11:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2018-12-09T03:35:54+11:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

@@ -4,16 +4,34 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/ability_slot.png</File>
+    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/blink.mp3</File>
     <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/circle.bmp</File>
+    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/explosion.mp3</File>
     <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/fireball.png</File>
+    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/fireball_shoot.mp3</File>
     <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/font.spritefont</File>
+    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/gameplay.mp3</File>
+    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/gravity_shoot.mp3</File>
+    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/health_bar.bmp</File>
+    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/island.bmp</File>
     <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/lightning.bmp</File>
-    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/meteor.bmp</File>
+    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/menu.mp3</File>
     <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/particle.bmp</File>
     <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/pillar.bmp</File>
     <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/player.png</File>
+    <File>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/victory.mp3</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

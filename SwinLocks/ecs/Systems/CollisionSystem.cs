@@ -22,33 +22,17 @@ namespace SwinLocks {
 
                         // get rid of this
                         if (ents[i].has<OwnableComponent>()) {
-                            OwnableComponent p1Own = ents[i].get<OwnableComponent>();
-                            if ( p1Own.owner == ents[j] )
+                            if ( ents[i].get<OwnableComponent>().owner == ents[j] )
                                 continue;
                         }
                         else if ( ents[j].has<OwnableComponent>() ) {
-                            OwnableComponent p2Own = ents[j].get<OwnableComponent>() as OwnableComponent;
-                            if ( p2Own.owner == ents[i] )
+                            if ( ents[j].get<OwnableComponent>().owner == ents[i] )
                                 continue;
                         }
 
                         // Obtain shape collider delegate and check entity intersection
-                        if ( Collider.get(p1Coll.Type, p2Coll.Type) (ents[i], ents[j]) ) {
-
+                        if ( Collider.get(p1Coll.Type, p2Coll.Type) (ents[i], ents[j]) )
                             GameContext.I.collRegister.register(ents[i], ents[j]);
-
-                            if ( ents[i].has<BumpComponent>() ) {
-                                Vector2 dir = p1Spac.pos - p2Spac.pos;
-                                dir.Normalize();
-                                p2Spac.vel = Vector2.Multiply( Vector2.Negate(dir), p2Spac.vel.Length() * Constants.BUMP_EFFICIENCY);
-                            }
-
-                            if ( ents[j].has<BumpComponent>() ) {
-                                Vector2 dir = p2Spac.pos - p1Spac.pos;
-                                dir.Normalize();
-                                p1Spac.vel = Vector2.Multiply(Vector2.Negate(dir), p1Spac.vel.Length() * Constants.BUMP_EFFICIENCY);
-                            }
-                        }
                     }
                 }
             }

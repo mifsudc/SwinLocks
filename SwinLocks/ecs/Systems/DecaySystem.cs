@@ -13,10 +13,8 @@ namespace SwinLocks {
 
             for ( int i = ents.Count - 1; i > -1; i--) {
                 DecayComponent d = ents[i].get<DecayComponent>();
-                if ( d.ttl == 0 )
+                if ( --d.ttl == 0 )
                     GameContext.deregisterEntity(ents[i]);
-                else
-                    d.ttl--;
             }
         }
     }

@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using System;
 
 namespace SwinLocks
@@ -34,15 +36,22 @@ namespace SwinLocks
         {
             sb = new SpriteBatch(GraphicsDevice);
 
-            //Resources.player = Content.Load<Texture2D>("circle");
             Resources.player = Content.Load<Texture2D>("player");
             Resources.pillar = Content.Load<Texture2D>("pillar");
             Resources.fireball = Content.Load<Texture2D>("fireball");
             Resources.lightning = Content.Load<Texture2D>("lightning");
             Resources.particle = Content.Load<Texture2D>("particle");
-            Resources.meteor = Content.Load<Texture2D>("meteor");
+            Resources.abilitySlot = Content.Load<Texture2D>("ability_slot");
+            Resources.healthbar = Content.Load<Texture2D>("health_bar");
 
             Resources.font = Content.Load<SpriteFont>("font");
+
+            Resources.shootFireball = Content.Load<SoundEffect>("fireball_shoot");
+            Resources.explode = Content.Load<SoundEffect>("explosion");
+            Resources.shootGravity = Content.Load<SoundEffect>("gravity_shoot");
+            Resources.blink = Content.Load<SoundEffect>("blink");
+            Resources.menu = Content.Load<Song>("menu");
+            Resources.gameplay = Content.Load<Song>("gameplay");
 
             state = new GameplayState(sb);
         }

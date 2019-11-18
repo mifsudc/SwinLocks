@@ -8,7 +8,6 @@ namespace SwinLocks {
     class DestroyerSystem : System {
         public override void Execute() {
             List<Entity> entsToDestroy = new List<Entity>();
-            List<Entity> entsToAdd = new List<Entity>();
             List<CollisionEvent> events = GameContext.I.collRegister
                 .query<DestructorComponent, DestructibleComponent>().toList();
 
@@ -33,12 +32,8 @@ namespace SwinLocks {
 
             foreach ( Entity e in entsToDestroy ) {
                 GameContext.deregisterEntity(e);
-                for ( int i = 0; i < 15; i++ ) {
-                    entsToAdd.Add( EntityFactory.particle(e.get<SpatialComponent>().pos) );
-                }
+                Resources.explode.Play();
             }
-
-            GameContext.registerEntities(entsToAdd);
         }
     }
 }

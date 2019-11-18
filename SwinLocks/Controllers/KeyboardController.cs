@@ -10,16 +10,6 @@ namespace SwinLocks {
 
     class KeyboardController : IInputController {
 
-        public CommandProcessor skillProc { get; private set; }
-
-        public KeyboardController() {
-            skillProc = new CommandProcessor();
-            skillProc.addSkill(0, new FireballCommand());
-            skillProc.addSkill(1, new BlinkCommand());
-            skillProc.addSkill(2, new DrainCommand());
-            skillProc.addSkill(3, new MeteorCommand());
-        }
-
         public List<Controller.Command> Poll() {
             List<Controller.Command> actions = new List<Controller.Command>();
 
@@ -46,11 +36,11 @@ namespace SwinLocks {
                 actions.Add(Controller.Command.Sk2);
             }
 
-            else if ( Input.keyPressed(Keys.O) ) {
+            else if ( Input.keyPressed(Keys.PageUp) ) {
                 actions.Add(Controller.Command.Sk3);
             }
 
-            else if ( Input.keyPressed(Keys.P) ) {
+            else if ( Input.keyPressed(Keys.PageDown) ) {
                 actions.Add(Controller.Command.Sk4);
             }
 

@@ -7,22 +7,11 @@ using Microsoft.Xna.Framework;
 
 namespace SwinLocks {
     class BlinkCommand : Command {
+        private Config config = Config.get();
         public override void execute(Entity e, SpatialComponent s) {
-            //ScriptingComponent script = new ScriptingComponent();
-
-            //List<(Animations.animate, int)> animations = new List<(Animations.animate, int)>() {
-            //    ( Animations.rotateColors(
-            //        new List<Color>() { Color.Green, Color.LightBlue, Color.ForestGreen } ),
-            //    2 )
-            //};
-
-            //AnimationComponent a = e.has<AnimationComponent>() ?
-            //    e.get<AnimationComponent>() :
-            //    new AnimationComponent();
-
-            //e.attach(new ScriptingComponent());
-            s.pos.X += 3 * (float) Math.Cos(s.rot);
-            s.pos.Y += 3 * (float) Math.Sin(s.rot);
+            s.pos.X += config.BLINK_DISTANCE * (float)Math.Cos(s.rot);
+            s.pos.Y += config.BLINK_DISTANCE * (float)Math.Sin(s.rot);
+            Resources.blink.Play();
         }
     }
 }

@@ -10,16 +10,18 @@ namespace SwinLocks {
     static class EntityFactory {
 
         private static FastRandom rand = new FastRandom();
+        private static Config config = Config.get();
 
         private static CircleHitbox playerHitbox;
-        public static Entity player(int offset, IInputController controller = null) {
+        public static Entity player(Vector2 pos, int offset, IInputController controller = null) {
             Entity e = new Entity();
-            RenderableComponent r = new RenderableComponent(Resources.player, Color.White);
-            r.offset = new Rectangle(0, Constants.PLAYER_PILLAR * offset, Constants.PLAYER_PILLAR, Constants.PLAYER_PILLAR);
-            r.drawRotation = false;
+            RenderableComponent r = new RenderableComponent(Resources.player, Color.White) {
+                offset = new Rectangle(0, Constants.PLAYER_PILLAR * offset, Constants.PLAYER_PILLAR, Constants.PLAYER_PILLAR),
+                drawRotation = false
+            };
             e.attach(r);
 
-            e.attach(new SpatialComponent( (offset + 1) * (Constants.SCREEN_X / 5) , 150f, true,
+            e.attach(new SpatialComponent( pos, true,
                 new Vector2(Constants.PLAYER_PILLAR / 2, Constants.PLAYER_PILLAR / 2)));
             
             if (playerHitbox == null)
@@ -27,8 +29,9 @@ namespace SwinLocks {
 
             e.attach(new CollisionComponent(playerHitbox));
             e.attach(new BumpComponent());
-            e.attach(new HealthComponent(60));
+            e.attach(new HealthComponent(config.PLAYER_MAX_HEALTH));
             e.attach(new DestructorComponent());
+            e.attach(new ImpulsableComponent());
 
             e.attach(new AnimationComponent(
                 new List<(Animations.animate animate, int period)>{
@@ -36,8 +39,9 @@ namespace SwinLocks {
                 } ));
 
             if (controller != null) {
-                ControllableComponent c = new ControllableComponent();
-                c.Controller = controller;
+                ControllableComponent c = new ControllableComponent {
+                    controller = controller
+                };
                 e.attach(c);
             }
 
@@ -45,12 +49,12 @@ namespace SwinLocks {
         }
 
         private static Hitbox pillarHitbox;
-        public static Entity pillar(int x, int y) {
+        public static Entity pillar(Vector2 pos) {
             Entity e = new Entity();
             RenderableComponent r = new RenderableComponent(Resources.pillar, Color.LightGray);
             e.attach(r);
 
-            e.attach( new SpatialComponent(x, y, false,
+            e.attach( new SpatialComponent(pos, false,
                 new Vector2(Constants.PLAYER_PILLAR / 2, Constants.PLAYER_PILLAR / 2) ));
 
             if ( pillarHitbox == null )
@@ -72,9 +76,10 @@ namespace SwinLocks {
 
             Vector2 pos = sourcePos;
             SpatialComponent s = new SpatialComponent(pos, false,
-                new Vector2( r.tex.Width / 2, r.tex.Height / 2) );
-            s.vel = Vector2.Multiply(
-                new Vector2((float)Math.Cos(rot), (float)Math.Sin(rot)), Constants.FIREBALL_SPEED);
+                new Vector2(r.tex.Width / 2, r.tex.Height / 2)) {
+                vel = Vector2.Multiply(
+                    new Vector2( (float)Math.Cos(rot), (float)Math.Sin(rot)), config.FIREBALL_SPEED)
+            };
             s.angularMomentum += 0.9f;
             e.attach(s);
 
@@ -82,10 +87,12 @@ namespace SwinLocks {
                 fireballHitbox = new CircleHitbox(r.tex.Height / 2);
 
             e.attach(new CollisionComponent(fireballHitbox));
-            e.attach(new DecayComponent(45));
+            e.attach(new DecayComponent(config.FIREBALL_TTL));
             e.attach(new DestructibleComponent());
             e.attach(new OwnableComponent(owner));
-            e.attach(new DamageComponent(20));
+            e.attach(new DamageComponent(config.FIREBALL_DMG));
+            e.attach(new ImpulseComponent(config.FIREBALL_KB));
+            e.attach(new DestructorComponent());
 
             e.attach( new AnimationComponent( 
                 new List<(Animations.animate animate, int period)>{
@@ -127,7 +134,7 @@ namespace SwinLocks {
             SpatialComponent s = new SpatialComponent(pos, false,
                 new Vector2(r.tex.Width / 2, r.tex.Height / 2));
             s.vel = Vector2.Multiply(
-                new Vector2((float)Math.Cos(rot), (float)Math.Sin(rot)), Constants.FIREBALL_SPEED);
+                new Vector2((float)Math.Cos(rot), (float)Math.Sin(rot)), config.DRAIN_SPEED);
             s.angularMomentum += 0.9f;
             e.attach(s);
 
@@ -135,10 +142,13 @@ namespace SwinLocks {
                 fireballHitbox = new CircleHitbox(r.tex.Height / 2);
 
             e.attach(new CollisionComponent(fireballHitbox));
-            e.attach(new DecayComponent(60));
+            e.attach(new DecayComponent(config.DRAIN_TTL));
             e.attach(new DestructibleComponent());
             e.attach(new OwnableComponent(owner));
-            e.attach(new DamageComponent(40));
+            e.attach(new DamageComponent(config.DRAIN_DMG));
+            e.attach(new DestructorComponent());
+            e.attach(new ImpulseComponent(config.DRAIN_KB));
+            e.attach(new HealerComponent(config.DRAIN_HEAL));
 
             e.attach(new AnimationComponent(
                 new List<(Animations.animate animate, int period)>{
@@ -151,28 +161,40 @@ namespace SwinLocks {
             return e;
         }
 
-        //public static Entity Meteor(Vector2 source) {
+        public static Hitbox gravityHitbox;
 
-        //}
+        public static Entity gravity(Entity owner, Vector2 sourcePos, float rot) {
+            Entity e = new Entity();
 
-        //public static Entity lightning(Entity owner, Vector2 sourcePos, float sourceRadius, float rot) {
-        //    Entity e = new Entity();
+            RenderableComponent r = new RenderableComponent(Resources.fireball, Color.Blue);
+            e.attach(r);
 
-        //    RenderableComponent r = new RenderableComponent(Resources.lightning, 2, Color.White);
-        //    r.offset = new Rectangle(0, 0, 400, 5);
-        //    e.attach(r);
+            Vector2 pos = sourcePos;
+            SpatialComponent s = new SpatialComponent(pos, false,
+                new Vector2(r.tex.Width / 2, r.tex.Height / 2)) {
+                vel = Vector2.Multiply(
+                    new Vector2((float)Math.Cos(rot), (float)Math.Sin(rot)), config.GRAVITY_SPEED)
+            };
+            s.angularMomentum += 0.9f;
+            e.attach(s);
 
-        //    float rad = r.tex.Width / 2;
-        //    Vector2 pos = sourcePos; /*new Vector2( (float) ( (sourceRad + rad) * Math.Cos(rot) ),
-        //        (float) ( (sourceRad + rad) * Math.Sin(rot) ) );*/
-        //    SpatialComponent s = new SpatialComponent(pos, false);
-        //    e.attach(s);
-        //    e.attach(new CollisionComponent(r.tex.Width / 2));
-        //    e.attach(new DecayComponent(5));
-        //    e.attach(new OwnableComponent(owner));
-        //    e.attach(new DamageComponent(20));
+            if ( gravityHitbox == null )
+                gravityHitbox = new CircleHitbox(r.tex.Height * 5);
 
-        //    return e;
-        //}
+            e.attach(new CollisionComponent(gravityHitbox));
+            e.attach(new DecayComponent(config.GRAVITY_TTL));
+            e.attach(new OwnableComponent(owner));
+            e.attach(new ImpulseComponent(config.GRAVITY_KB));
+
+            e.attach(new AnimationComponent(
+                new List<(Animations.animate animate, int period)>{
+                    (Animations.rotateColors(
+                        new List<Color>() { Color.LightBlue, Color.AliceBlue, Color.SkyBlue }
+                        ), 2)
+                }
+            ));
+
+            return e;
+        }
     }
 }

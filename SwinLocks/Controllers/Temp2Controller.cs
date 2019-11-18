@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 namespace SwinLocks {
     class Temp2Controller : IInputController {
 
-        public CommandProcessor skillProc { get; private set; }
-
         public List<Controller.Command> Poll() {
             List<Controller.Command> actions = new List<Controller.Command>();
 
@@ -28,19 +26,19 @@ namespace SwinLocks {
                 actions.Add(Controller.Command.Down);
             }
 
-            if ( Input.keyPressed(Keys.E) ) {
+            if ( Input.keyPressed(Keys.Q) ) {
                 actions.Add(Controller.Command.Sk1);
             }
 
-            else if ( Input.keyPressed(Keys.R) ) {
+            else if ( Input.keyPressed(Keys.E) ) {
                 actions.Add(Controller.Command.Sk2);
             }
 
-            else if ( Input.keyPressed(Keys.D3) ) {
+            else if ( Input.keyPressed(Keys.R) ) {
                 actions.Add(Controller.Command.Sk3);
             }
 
-            else if ( Input.keyPressed(Keys.D4) ) {
+            else if ( Input.keyPressed(Keys.F) ) {
                 actions.Add(Controller.Command.Sk4);
             }
 

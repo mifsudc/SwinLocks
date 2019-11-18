@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace SwinLocks {
     class CommandProcessor {
-        private Dictionary<int, Command> skills;
+        private Dictionary<Controller.Command, Command> skills;
 
         public CommandProcessor()
-            => skills = new Dictionary<int, Command>();
+            => skills = new Dictionary<Controller.Command, Command>();
 
-        public void addSkill(int slot, Command skill)
+        public void addSkill(Controller.Command slot, Command skill)
             => skills.Add(slot, skill);
 
-        public void Process(int slot, Entity e) {
+        public void Process(Controller.Command slot, Entity e) =>
             skills[slot]?.execute(e, e.get<SpatialComponent>() );
-        }
     }
 }

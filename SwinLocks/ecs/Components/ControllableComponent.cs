@@ -8,8 +8,15 @@ namespace SwinLocks
 {
     class ControllableComponent : Component {
 
-        private IInputController controller;
+        public CommandProcessor skillProc { get; private set; }
+        public IInputController controller { get; set; }
 
-        public IInputController Controller { get => controller; set => controller = value; }
+        public ControllableComponent() {
+            skillProc = new CommandProcessor();
+            skillProc.addSkill(Controller.Command.Sk1, new FireballCommand());
+            skillProc.addSkill(Controller.Command.Sk2, new BlinkCommand());
+            skillProc.addSkill(Controller.Command.Sk3, new DrainCommand());
+            skillProc.addSkill(Controller.Command.Sk4, new GravityCommand());
+        }
     }
 }

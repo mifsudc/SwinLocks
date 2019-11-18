@@ -29,8 +29,10 @@ namespace SwinLocks {
         public static void registerEntities(List<Entity> l)
             => I.entities.AddRange(l);
 
-        public static void deregisterEntity(Entity e)
-            => I.entities.Remove(e);
+        public static void deregisterEntity(Entity e) {
+            e.notify();
+            I.entities.Remove(e);
+        }
 
         public static List<Entity> queryEntities<T>() where T : Component
             => (from e in I.entities where e.has<T>() select e).ToList();

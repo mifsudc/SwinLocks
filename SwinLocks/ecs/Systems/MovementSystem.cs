@@ -12,18 +12,18 @@ namespace SwinLocks
         {
             List<Entity> ents = GameContext.queryEntities<SpatialComponent>();
 
-            foreach (Entity e in ents)
-            {
+            foreach (Entity e in ents) {
                 SpatialComponent s = e.get<SpatialComponent>();
 
+                // Apply movement
                 s.rot += s.angularMomentum;
-
                 s.pos += s.vel;
                 if (s.friction) {
                     s.vel.X *= Constants.FRICTION;
                     s.vel.Y *= Constants.FRICTION;
                 }
 
+                // Wrap edges
                 if ( s.pos.Y - s.origin.Y > Constants.SCREEN_Y )
                     s.pos.Y = 0;
                 else if ( s.pos.Y + s.origin.Y < 0 )

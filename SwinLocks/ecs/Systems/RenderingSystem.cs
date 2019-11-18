@@ -10,9 +10,8 @@ namespace SwinLocks {
     class RenderingSystem : System {
 
         private SpriteBatch sb;
-        public RenderingSystem(SpriteBatch sb) {
+        public RenderingSystem(SpriteBatch sb) =>
             this.sb = sb;
-        }
 
         public override void Execute() {
             List<Entity> ents = GameContext.queryEntities<RenderableComponent>();
