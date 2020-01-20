@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/font.spritefont</SourceFile>
-  <SourceTime>2018-12-09T03:35:46+11:00</SourceTime>
+  <SourceTime>2019-11-20T18:15:54.1928703+11:00</SourceTime>
   <DestFile>C:/Users/Cory Mifsud/Documents/Swin/SwinLocks/SwinLocks/SwinLocks/Content/bin/Windows/Content/font.xnb</DestFile>
-  <DestTime>2019-10-22T23:52:01.7780303+11:00</DestTime>
+  <DestTime>2019-11-20T18:16:15.5128597+11:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2018-12-09T03:35:54+11:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

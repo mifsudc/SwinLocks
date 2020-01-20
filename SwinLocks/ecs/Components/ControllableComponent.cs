@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace SwinLocks
 {
     class ControllableComponent : Component {
-
         public CommandProcessor skillProc { get; private set; }
         public IInputController controller { get; set; }
 

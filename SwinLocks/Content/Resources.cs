@@ -17,6 +17,8 @@ namespace SwinLocks {
         public static Texture2D particle;
         public static Texture2D abilitySlot;
         public static Texture2D healthbar;
+        public static Texture2D splash;
+        public static Texture2D winner;
 
         public static SoundEffect shootFireball;
         public static SoundEffect explode;

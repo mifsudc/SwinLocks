@@ -58,6 +58,7 @@
     <Compile Include="Controllers\InputController.cs" />
     <Compile Include="Controllers\Temp2Controller.cs" />
     <Compile Include="Core\Animations.cs" />
+    <Compile Include="Core\States\EndGameState.cs" />
     <Compile Include="Core\EntityFactory.cs" />
     <Compile Include="Core\Subscribers\GameEndSubscriber.cs" />
     <Compile Include="Core\Subscribers\ParticleSubscriber.cs" />
@@ -88,9 +89,9 @@
     <Compile Include="Utils\Constants.cs" />
     <Compile Include="Utils\ExtensionMethods.cs" />
     <Compile Include="Core\GameContext.cs" />
-    <Compile Include="Core\GameplayState.cs" />
-    <Compile Include="Core\GameState.cs" />
-    <Compile Include="Core\MenuState.cs" />
+    <Compile Include="Core\States\GameplayState.cs" />
+    <Compile Include="Core\States\GameState.cs" />
+    <Compile Include="Core\States\MenuState.cs" />
     <Compile Include="ecs\Component.cs" />
     <Compile Include="ecs\Components\ControllableComponent.cs" />
     <Compile Include="ecs\Components\RenderableComponent.cs" />

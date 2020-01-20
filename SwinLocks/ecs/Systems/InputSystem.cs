@@ -8,14 +8,11 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SwinLocks {
     class InputSystem : System {
-        private Config config = Config.get();
         public override void Execute() {
             List<Entity> ents = GameContext.queryEntities<ControllableComponent>();
             foreach (Entity e in ents) {
                 ControllableComponent c = e.get<ControllableComponent>();
-
                 List<Controller.Command> comms = c.controller.Poll();
-
                 foreach ( Controller.Command comm in comms) {
                     SpatialComponent s = e.get<SpatialComponent>();
                     if (comm == Controller.Command.Up) {

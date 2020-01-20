@@ -9,9 +9,9 @@ namespace SwinLocks
 {
     public class SwinLocks : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch sb;
-        GameState state;
+        private GraphicsDeviceManager graphics;
+        public static SpriteBatch sb;
+        public static GameState state;
 
         public SwinLocks()
         {
@@ -20,13 +20,12 @@ namespace SwinLocks
             Content.RootDirectory = "Content";
         }
 
-        protected override void Initialize()
-        {
+        protected override void Initialize() {
             new GameContext();
 
             graphics.PreferredBackBufferWidth = Constants.SCREEN_X;
             graphics.PreferredBackBufferHeight = Constants.SCREEN_Y;
-            //graphics.IsFullScreen = true;
+            graphics.IsFullScreen = true;
             graphics.ApplyChanges();
 
             base.Initialize();
@@ -43,6 +42,8 @@ namespace SwinLocks
             Resources.particle = Content.Load<Texture2D>("particle");
             Resources.abilitySlot = Content.Load<Texture2D>("ability_slot");
             Resources.healthbar = Content.Load<Texture2D>("health_bar");
+            Resources.splash = Content.Load<Texture2D>("splash");
+            Resources.winner = Content.Load<Texture2D>("winner");
 
             Resources.font = Content.Load<SpriteFont>("font");
 
@@ -53,7 +54,7 @@ namespace SwinLocks
             Resources.menu = Content.Load<Song>("menu");
             Resources.gameplay = Content.Load<Song>("gameplay");
 
-            state = new GameplayState(sb);
+            state = new MenuState();
         }
 
         protected override void UnloadContent() {}

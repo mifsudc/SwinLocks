@@ -32,12 +32,10 @@ namespace SwinLocks {
                 pos.X += 100;
                 float healthpercent = h.health / config.PLAYER_MAX_HEALTH * 100;
                 for (int j = 0; j < 100; j++ ) {
-                    if ( j <= healthpercent ) {
+                    if ( j <= healthpercent )
                         sb.Draw(Resources.healthbar, pos, Color.Green);
-                    }
-                    else {
+                    else
                         sb.Draw(Resources.healthbar, pos, Color.Red);
-                    }
                     pos.X += 5;
                 }
                 i++;

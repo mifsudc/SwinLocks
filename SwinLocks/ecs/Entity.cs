@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace SwinLocks
 {
-    class Entity
-    {
+    class Entity {
         private Dictionary<Type, Component> components;
         private List<Subscriber> subscribers;
 
@@ -28,9 +27,10 @@ namespace SwinLocks
         public void detach<T>() where T: Component
             => components.Remove(typeof(T));
 
-        public void subscribe(Subscriber s) =>
+        public void subscribe(Subscriber s) {
             subscribers.Add(s);
-
+            s.subscribe(this);
+        }
         public void notify() {
             foreach ( Subscriber s in subscribers )
                 s.notify(this);

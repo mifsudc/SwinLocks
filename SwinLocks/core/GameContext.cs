@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SwinLocks {
-    class GameContext 
-    {
+    class GameContext {
         public static GameContext I;
         private List<Entity> entities;
         public CollisionRegister collRegister;
@@ -25,9 +24,6 @@ namespace SwinLocks {
 
         public static void registerEntity(Entity e)
             => I.entities.Add(e);
-
-        public static void registerEntities(List<Entity> l)
-            => I.entities.AddRange(l);
 
         public static void deregisterEntity(Entity e) {
             e.notify();

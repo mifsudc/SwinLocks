@@ -11,7 +11,6 @@ namespace SwinLocks
         public override void Execute()
         {
             List<Entity> ents = GameContext.queryEntities<SpatialComponent>();
-
             foreach (Entity e in ents) {
                 SpatialComponent s = e.get<SpatialComponent>();
 

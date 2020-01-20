@@ -77,3 +77,5 @@ C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x8
 C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\menu.xnb
 C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\victory.wma
 C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\victory.xnb
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\splash.xnb
+C:\Users\Cory Mifsud\Documents\Swin\SwinLocks\SwinLocks\SwinLocks\bin\Windows\x86\Debug\Content\winner.xnb

@@ -7,9 +7,7 @@ using System.IO;
 
 namespace SwinLocks {
     class Config {
-
         private static Config INSTANCE;
-
         Config() {
             if ( INSTANCE != null )
                 throw new Exception("Singleton instance allowance exceeded.");
